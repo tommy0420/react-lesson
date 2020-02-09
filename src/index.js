@@ -1,12 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const players = [
+  {
+    name: '高塚',
+    skills: 'バスケ'
+  },
+  {
+    name: '石川',
+    skills: '昼寝'
+  }
+]
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <App players={players} />,
+  document.getElementById('root')
+)
+
+
+      // const count = 0
+  // const setCount = () => {
+  //   count変数を更新するための処理
+  // }
+  // ■stateの決まり
+  // ・state(count変数)を直接再代入などによって変更・更新してはならない
+  // count = count + 1
+  // ■state更新用関数の使い方
+  // setCount(count + 1)
