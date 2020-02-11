@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
-import Player from './Player'
+import React from 'react'
+import User from './User'
 
-const App = ({ players }) => {
-  const [count, setCount] = useState(0)
-  const [count2, setCount2] = useState(0)
-
+const App = ({ users }) => {
   return (
-    <>
-      <Player playerProf={players[0]} />
-      <Player playerProf={players[1]} />
-    </>
+    <div>
+      <h1>hello world</h1>
+      <p>react始めます</p>
+      <User user={users.iskw} />
+      <User user={users.mykw} />
+    </div>
   )
 }
 
