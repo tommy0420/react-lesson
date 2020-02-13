@@ -1,21 +1,24 @@
 import React, { useState } from 'react'
 
-const User = () => {
+const User = ({ user }) => {
+  console.log(user)
+  // const { name, tokugi } = props
+
+  // const name = props.name
+  // const tokugi = props.tokugi
+
   // 分割代入
   const [score, setScore] = useState(0)
-  // const score = 0
-  // const setScore = scoreを更新するための関数
 
-  // let score = 0
   const handleClick = () => {
-    // score++
     setScore(score + 1)
   }
+
   return (
     <>
       <div>
-        <h1>名前：石川</h1>
-        <p>特技：お昼寝</p>
+        <h1>名前：{user.name}</h1>
+        <p>特技：{user.tokugi}</p>
         <p>Score：{score}</p>
         <button
           type="button"
@@ -23,12 +26,6 @@ const User = () => {
         >
           加算
         </button>
-      </div>
-      <div>
-        <h1>名前：相馬</h1>
-        <p>特技：ない</p>
-        <p>Score：０</p>
-        <button type="button">加算</button>
       </div>
     </>
   )

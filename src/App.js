@@ -1,10 +1,15 @@
 import React from 'react'
 import User from './User'
 
-const App = () => {
+const App = ({ users }) => {
   return (
     <>
-      <User />
+      <User
+        user={users[0]}
+      />
+      <User
+        user={users[1]}
+      />
     </>
   )
 }
