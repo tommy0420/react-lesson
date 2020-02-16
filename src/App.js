@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
-import Player from './Player'
+import Form from './Form'
+import List from './List'
 
-const App = ({ players }) => {
-  const [count, setCount] = useState(0)
-  const [count2, setCount2] = useState(0)
-
+const App = () => {
+  const [todos, setTodos] = useState([
+    '風呂洗う',
+    '勉強する',
+  ])
   return (
-    <>
-      <Player playerProf={players[0]} />
-      <Player playerProf={players[1]} />
-    </>
+    <div>
+      <Form setTodos={setTodos} todos={todos} />
+      <List todos={todos} />
+    </div>
   )
 }
 
