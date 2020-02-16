@@ -1,8 +1,10 @@
 import React from "react"
 
-const Item = () => {
+const Item = ({ todo }) => {
   return (
-    <li>アイウエオ</li>
+    <>
+      <li>{todo}</li>
+    </>
   )
 }
 
