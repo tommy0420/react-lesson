@@ -1,17 +1,13 @@
 import React from 'react'
-import User from './User'
+import Form from "./Form"
+import List from "./List"
 
-const App = ({ users }) => {
+const App = () => {
   return (
-    <>
-      <User
-        user={users[0]}
-      />
-      <User
-        user={users[1]}
-      />
-    </>
+    <div>
+      <Form />
+      <List />
+    </div>
   )
 }
-
 export default App
