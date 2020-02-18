@@ -10,4 +10,7 @@
 
 const ary = [1, 2, 3]
 
-// ary.map(x => x * 2)
+const newAry = ary.map(x => x * 2)
+
+console.log(ary) // [1,2,3] 
+console.log(newAry)//[2, 4, 6]
