@@ -12,11 +12,26 @@ const App = () => {
     },
   ])
 
+  const addTodo = (text) => {
+    // setTodos(todos.concat({
+    //   text: newNote,
+    //   isDone: false,
+    // }))
+
+    const newTodos = [
+      ...todos, // スプレッド演算子
+      {
+        text // ↓と同義
+        // text: text
+      }
+    ]
+    setTodos(newTodos)
+  }
+
   return (
     <div>
       <Form
-        setTodos={setTodos}
-        todos={todos}
+        addTodo={addTodo}
       />
       <List
         todos={todos}

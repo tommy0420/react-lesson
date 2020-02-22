@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 
-const Form = ({ setTodos, todos }) => {
-  const [newNote, setNewNote] = useState('')
+const Form = ({ addTodo }) => {
+  const [value, setValue] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setTodos(todos.concat({
-      text: newNote,
-      isDone: false
-    }))
-    setNewNote("")
+
+    // todosに新しいtodoを追加する処理
+    // ロジックを気にしないで済むようにしたい...
+    addTodo(value) // valueは今の入力値
+
+    setValue("")
   }
   const handleChange = (e) => {
-    console.log(newNote)
-    setNewNote(e.target.value)
+    setValue(e.target.value)
   }
   return (
     <form
@@ -22,7 +22,7 @@ const Form = ({ setTodos, todos }) => {
     >
       <input
         type="text"
-        value={newNote}
+        value={value}
         onChange={handleChange}
       />
       <button
