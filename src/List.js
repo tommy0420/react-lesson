@@ -1,8 +1,17 @@
 import React from 'react'
 import Item from './Item'
 
-const List = ({ todos }) => {
-  const row = todos.map(todo => <Item aiueo={todo} />)
+const List = ({ todos, toggleIsDone }) => {
+  const row = todos.map((todo, index) => (
+    <Item 
+      text={todo.text}
+      isDone={todo.isDone}
+      toggleIsDone={toggleIsDone}
+      key={index}
+      id={index}
+    />
+  )
+)
 
   // console.log(row)
 

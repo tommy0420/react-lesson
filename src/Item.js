@@ -1,17 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Item = ({ aiueo }) => {
-  const [isDone, setIsDone] = useState(false)
-  let isDoneText = isDone ? "戻す" : "完了"
-  const toggleIsDone = () => {
-    setIsDone(!isDone)
-  }
+const Item = ({ text, isDone, toggleIsDone, id }) => {
+  const isDoneText = isDone ? "戻す" : "完了" // 三項演算子
+  
   return (
     <li>
-      {aiueo.text}
+      <span
+          style={{textDecoration: isDone ? "line-through" : "none"}}
+      >
+      {text}
+      </span>
       <button
         type="button"
-        onClick={toggleIsDone}
+        onClick={() => toggleIsDone(id)}
       >
         {isDoneText}
       </button>
