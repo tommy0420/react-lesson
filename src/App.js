@@ -11,14 +11,12 @@ const App = () => {
       text: '勉強する',
     },
   ])
-  const [newNote, setNewNote] = useState("")
+
   return (
     <div>
       <Form
         setTodos={setTodos}
         todos={todos}
-        newNote={newNote}
-        setNewNote={setNewNote}
       />
       <List
         todos={todos}

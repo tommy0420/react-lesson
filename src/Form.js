@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Form = ({ setTodos, todos, newNote, setNewNote }) => {
+const Form = ({ setTodos, todos }) => {
+  const [newNote, setNewNote] = useState('')
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setTodos(todos.concat({
