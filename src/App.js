@@ -4,19 +4,25 @@ import List from "./List"
 
 const App = () => {
   const [todos, setTodos] = useState([
-    'アイウエオ',
-    '勉強する',
-    'ご飯食べる',
-    '追加したよ',
-    'バリバリ',
+    {
+      note: 'アイウエオ',
+      id: 0,
+    },
+    {
+      note: '勉強',
+      id: 1,
+    }
   ])
+  const [newNote, setNewNote] = useState('')
   return (
     <div>
       <Form
         setTodos={setTodos}
         todos={todos}
+        newNote={newNote}
+        setNewNote={setNewNote}
       />
-      <List todos={todos} />
+      <List todos={todos} setTodos={setTodos} />
     </div>
   )
 }

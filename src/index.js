@@ -6,8 +6,3 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 )
-
-// ・機能
-// 追加
-// 削除
-// 編集
