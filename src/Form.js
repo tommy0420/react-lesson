@@ -5,7 +5,8 @@ const Form = ({ setTodos, todos, newNote, setNewNote }) => {
     e.preventDefault()
     setTodos(todos.concat({
       note: newNote,
-      id: todos.length
+      id: todos.length,
+      isDone: false,
     }))
   }
   const handleChange = (e) => {

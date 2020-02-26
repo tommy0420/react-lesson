@@ -15,8 +15,14 @@ const Item = ({ todo, todos, setTodos }) => {
         )
       }
     )
-
-
+    setTodos(newTodos)
+  }
+  let isDoneText = todo.isDone ? '戻す' : '完了'
+  const toggleIsDone = () => {
+    const newTodos = todos.slice()
+    const changedIsDoneTodo = newTodos.find(x => x.id === todo.id)
+    changedIsDoneTodo.isDone = !changedIsDoneTodo.isDone
+    // console.log("newTodos", newTodos)
     setTodos(newTodos)
   }
   return (
@@ -28,6 +34,12 @@ const Item = ({ todo, todos, setTodos }) => {
           onClick={handleDelete}
         >
           削除
+        </button>
+        <button
+          type="button"
+          onClick={toggleIsDone}
+        >
+          {isDoneText}
         </button>
       </li>
     </>
